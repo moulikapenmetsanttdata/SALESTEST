@@ -1,0 +1,26 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="/sap/opu/odata/sap/ZC_SALES_TEST_CDS/$metadata">
+		<edmx:Include Alias="Metadata" Namespace="ZC_SALES_TEST_CDS"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="ZSalesTest.ext.annotation.ZC_SALES_TEST_CDS">
+			<Annotations Target="Metadata.ZC_Sales_TestType">
+				<Annotation Term="UI.SelectionVariant">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="UI.Parameter">
+									<PropertyValue Property="PropertyName" PropertyPath="i_vbeln"/>
+									<PropertyValue Property="PropertyValue" Path="i_vbeln"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
